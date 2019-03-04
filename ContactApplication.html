@@ -10,33 +10,35 @@
 </head> 
 <body>
 <section data-role="page" id="firstPage" >
-	<center>
+	
 	<header data-role="header" >Contact List</header>
-	</center><article data-role="content" >
+	<a href="#newContact" type="button" id="newContactButton">Add New Contact</a>
+
+	<center>
+	<article data-role="content" >
+	
 	<ul data-role="listview" data-inset="true" data-filter="true" id="ul">
-		<a href="#newContact" type="button" id="newContactButton">Add New Contact</a>
-
-		<li><a href="#viewContact" data-transition="flip" onclick="getContactDetails(this)"><img src="Female.jpg"/> <p id="contactName">Aya</p> <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
-
-		<li><a href="#viewContact" data-transition="flip" onclick="getContactDetails(this)"><img src="male.png"/><p id="contactName">Amr</p> <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
-
-		<li><a href="#viewContact" data-transition="flip" onclick="getContactDetails(this)"><img src="male.png"/> <p id="contactName">Ali</p> <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
-		<li><a href="#viewContact" data-transition="flip" onclick="getContactDetails(this)"><img src="male.png"/> <p id="contactName">Hima</p> <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
-		<li><a href="#viewContact" data-transition="flip" onclick="getContactDetails(this)"><img src="male.png"/> <p id="contactName">Waleed</p> <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
+		<li><a href="#viewContact" data-transition="flip" onclick="getContactDetails(this)"><img src="Female.jpg"/> <p id="contactName">Aya</p> <a href="tel:+13174562564" ><img src="call.png" id="callIcon"/></a> </a></li>
+		<li><a href="#viewContact" data-transition="flip" onclick="getContactDetails(this)"><img src="male.jpg"/><p id="contactName">Amr</p> <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
+		<li><a href="#viewContact" data-transition="flip" onclick="getContactDetails(this)"><img src="male.jpg"/> <p id="contactName">Ali</p> <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
+		<li><a href="#viewContact" data-transition="flip" onclick="getContactDetails(this)"><img src="male.jpg"/> <p id="contactName">Hima</p> <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
+		<li><a href="#viewContact" data-transition="flip" onclick="getContactDetails(this)"><img src="male.jpg"/> <p id="contactName">Waleed</p> <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
 		<li><a href="#viewContact" data-transition="flip" onclick="getContactDetails(this)"><img src="female.jpg"/> <p id="contactName">Aliaa</p> <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
 	</ul>
 	</article>
-	<center>
-	<footer>Contact List</footer>
 	</center>
+	
+	<footer>Contact List</footer>
+	
 </section>
 
 <section data-role="page" id="viewContact" data-add-back-btn="true">
-	<header data-role="header"> <center>Contact</center></header>
+	<header data-role="header"  id="contactHeader"> <center>Contact</center></header>
 	<article data-role="content">
-	<h1 id="contactHeader">hello</h1>
-	<img id ="contactImg" src="male.png"/>
-	<a href="#firstPage" data-role="button"> go to First Page</a>
+	<img id ="contactImg" src=""/>
+	<a href="#newContact" data-role="button"> Edit</a>
+	<a href="#firstPage" data-role="button"> Delete</a>
+	<a href="" data-role="button" id="callButton"> call</a>
 	</article>
 	<footer>Contact List</footer>
 </section>

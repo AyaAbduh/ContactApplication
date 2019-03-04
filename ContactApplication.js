@@ -4,8 +4,12 @@ function getContactDetails(obj){
 	document.getElementById("contactHeader").innerHTML=contactHeader;
 	
 	var contactImg=result[0].getAttribute('src');
-	//alert(contactImg);
+
 	
 	document.getElementById("contactImg").setAttribute('src',contactImg);
+	// alert(result[2]);
+	//var phone=result[2].getAttribute('href');
+   
+	//document.getElementById("callButton").setAttribute('href',phone);
 	
 }
