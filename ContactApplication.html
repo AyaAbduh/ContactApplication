@@ -6,12 +6,18 @@
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	<link rel="stylesheet" href="style.css">
 </head> 
 <body>
 <section data-role="page" id="firstPage">
+
+<header>
+Contact List
+</header>
+
 <center>
-<header>Contact List</header>
-</center><article data-role="content">
+<article data-role="content">
+
 <ul data-role="listview" data-inset="true" data-filter="true">
 	<li><a href="#viewContact" data-transition="flip" onclick="getContactDetails(this)"><img src="Female.jpg"/> <p id="contactName">Aya</p> <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
 	<li><a href="#viewContact" data-transition="flip"><img src="male.png"/> Amr <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
@@ -21,9 +27,9 @@
 	<li><a href="#viewContact" data-transition="flip"><img src="female.jpg"/> aliaa <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
 </ul>
 </article>
-<center>
-<footer>Contact List</footer>
 </center>
+
+<footer>Contact List</footer>
 </section>
 <section data-role="page" id="viewContact" data-add-back-btn="true">
 <header> </header>
