@@ -4,45 +4,74 @@
 	<title>My Page</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<link rel="stylesheet" href="style.css" />
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
-   <link rel="stylesheet" href="style.css"/>	
 </head> 
 <body>
-<section data-role="page" id="firstPage">
+<section data-role="page" id="firstPage" >
+	<center>
+	<header data-role="header" >Contact List</header>
+	</center><article data-role="content" >
+	<ul data-role="listview" data-inset="true" data-filter="true" id="ul">
+		<a href="#newContact" type="button" id="newContactButton">Add New Contact</a>
 
-<header>
-Contact List
-</header>
+		<li><a href="#viewContact" data-transition="flip" onclick="getContactDetails(this)"><img src="Female.jpg"/> <p id="contactName">Aya</p> <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
 
-<center>
-<article data-role="content">
+		<li><a href="#viewContact" data-transition="flip" onclick="getContactDetails(this)"><img src="male.png"/><p id="contactName">Amr</p> <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
 
-<ul data-role="listview" data-inset="true" data-filter="true">
-	<li><a href="#viewContact" data-transition="flip" onclick="getContactDetails(this)"><img src="Female.jpg"/> <p id="contactName">Aya</p> <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
-	<li><a href="#viewContact" data-transition="flip"><img src="male.jpg"/> Amr <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
-	<li><a href="#viewContact" data-transition="flip"><img src="male.jpg"/> Ali <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
-	<li><a href="#viewContact" data-transition="flip"><img src="male.jpg"/> hima <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
-	<li><a href="#viewContact" data-transition="flip"><img src="male.jpg"/> walled <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
-	<li><a href="#viewContact" data-transition="flip"><img src="female.jpg"/> aliaa <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
-</ul>
-</article>
-</center>
-
-<footer>Contact List</footer>
+		<li><a href="#viewContact" data-transition="flip" onclick="getContactDetails(this)"><img src="male.png"/> <p id="contactName">Ali</p> <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
+		<li><a href="#viewContact" data-transition="flip" onclick="getContactDetails(this)"><img src="male.png"/> <p id="contactName">Hima</p> <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
+		<li><a href="#viewContact" data-transition="flip" onclick="getContactDetails(this)"><img src="male.png"/> <p id="contactName">Waleed</p> <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
+		<li><a href="#viewContact" data-transition="flip" onclick="getContactDetails(this)"><img src="female.jpg"/> <p id="contactName">Aliaa</p> <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
+	</ul>
+	</article>
+	<center>
+	<footer>Contact List</footer>
+	</center>
 </section>
 
 <section data-role="page" id="viewContact" data-add-back-btn="true">
-<header id="contactHeader"> </header>
-<article data-role="content">
-<img id ="contactImg" src="" /><br
-<a href="index.html" data-role="button" data-icon="delete" data-iconpos="notext">Delete</a>
-
-</article>
-
-<footer>Contact List</footer>
+	<header data-role="header"> <center>Contact</center></header>
+	<article data-role="content">
+	<h1 id="contactHeader">hello</h1>
+	<img id ="contactImg" src="male.png"/>
+	<a href="#firstPage" data-role="button"> go to First Page</a>
+	</article>
+	<footer>Contact List</footer>
 </section>
 
+<section data-role="page" id="newContact" data-add-back-btn="true">
+	<header data-role="header"><center>New Contact</center></header>
+	<article data-role="content">
+	<form>
+		
+			<label> Name </label>
+			<input type="text" name="name" id="name">
+		
+		
+		
+			<label>Phone</label>
+			<input type="tel" name="phone" id="phone" required="true">	
+		
+
+	
+			<label>Email</label>
+			<input type="Email" name="name" id="email" required="true">	
+		
+		
+		
+			<input type="submit" name="submit" id="formSubmit" value="save" onclick="saveButtonHandler(this)">
+			<input type="reset" name="cancel" id="formCancel" value="cancel">
+			
+		
+
+	</form>
+	
+	<a href="#firstPage" data-role="button"> go to First Page</a>
+	</article>
+	<footer>Contact List</footer>
+</section>
 <script src="ContactApplication.js"></script>
 </body>
 </html>
