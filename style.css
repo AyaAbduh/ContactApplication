@@ -2,12 +2,11 @@
 *{
   box-sizing: border-box;
 }
+
 #callIcon{
 	float:right;
 }
-a{
-	width:100%;
-}
+
 #firstPage article{
 	width:60%;
 	float:center;
@@ -22,10 +21,7 @@ header{
 	padding:7px;
     text-align: center;	
 }
-header button{
-	
-	height:10px;
-}
+
 footer{
 	position: fixed;
 	left: 0;
@@ -37,4 +33,9 @@ footer{
 	font-size:30px;
 	padding:7px;
 	text-align: center;	
+}
+
+#viewContact img{
+	size:100px;
+	
 }

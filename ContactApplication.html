@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
-	<link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="style.css"/>	
 </head> 
 <body>
 <section data-role="page" id="firstPage">
@@ -20,10 +20,10 @@ Contact List
 
 <ul data-role="listview" data-inset="true" data-filter="true">
 	<li><a href="#viewContact" data-transition="flip" onclick="getContactDetails(this)"><img src="Female.jpg"/> <p id="contactName">Aya</p> <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
-	<li><a href="#viewContact" data-transition="flip"><img src="male.png"/> Amr <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
-	<li><a href="#viewContact" data-transition="flip"><img src="male.png"/> Ali <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
-	<li><a href="#viewContact" data-transition="flip"><img src="male.png"/> hima <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
-	<li><a href="#viewContact" data-transition="flip"><img src="male.png"/> walled <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
+	<li><a href="#viewContact" data-transition="flip"><img src="male.jpg"/> Amr <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
+	<li><a href="#viewContact" data-transition="flip"><img src="male.jpg"/> Ali <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
+	<li><a href="#viewContact" data-transition="flip"><img src="male.jpg"/> hima <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
+	<li><a href="#viewContact" data-transition="flip"><img src="male.jpg"/> walled <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
 	<li><a href="#viewContact" data-transition="flip"><img src="female.jpg"/> aliaa <a href="tel:+13174562564"><img src="call.png" id="callIcon"/></a> </a></li>
 </ul>
 </article>
@@ -31,15 +31,18 @@ Contact List
 
 <footer>Contact List</footer>
 </section>
+
 <section data-role="page" id="viewContact" data-add-back-btn="true">
-<header> </header>
+<header id="contactHeader"> </header>
 <article data-role="content">
-<h1 id="contactHeader">hello</h1>
-<img id ="contactImg" src="male.png"/>
-<a href="#firstPage" data-role="button"> go to First Page</a>
+<img id ="contactImg" src="" /><br
+<a href="index.html" data-role="button" data-icon="delete" data-iconpos="notext">Delete</a>
+
 </article>
+
 <footer>Contact List</footer>
 </section>
+
 <script src="ContactApplication.js"></script>
 </body>
 </html>
