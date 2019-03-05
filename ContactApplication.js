@@ -1,5 +1,6 @@
 
 var contactHeader;
+var li=0;
 function getContactDetails(obj){
 	var result=$(obj).children();
 	contactHeader=result[1].innerHTML;
@@ -9,7 +10,9 @@ function getContactDetails(obj){
 
 	
 	document.getElementById("contactImg").setAttribute('src',contactImg);
-	alert(result[2]);
+	li=$(obj).parentsUntil("ul")[2];
+	
+	//alert(result[2]);
 	//var phone=result[2].getAttribute('href');
    
 	//document.getElementById("callButton").setAttribute('href',phone);
@@ -36,4 +39,15 @@ function saveButtonHandler(obj){
 	var name=formChildren[1].value;
 	var phone=formChildren[3].value;
 	$("#ul").append("<li><a href='#viewContact' data-transition='flip' onclick='getContactDetails(this)'><img src='Female.jpg'/> <p id='contactName'>"+name+"</p> <a href='tel:"+phone+"'><img src='call.png' id='callIcon'/></a> </a></li>");
+	$("#ul").listview("refresh");
+}
+
+function deleteButtonHandler(){
+	alert("inside delete");
+	$("li").eq($(li).index()).remove();
+
+	li[8].remove
+	arr[8].remove
+
+
 }
