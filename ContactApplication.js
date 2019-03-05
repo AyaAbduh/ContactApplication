@@ -38,16 +38,21 @@ function saveButtonHandler(obj){
 	//alert(formElements[1].value);
 	var name=formChildren[1].value;
 	var phone=formChildren[3].value;
-	$("#ul").append("<li><a href='#viewContact' data-transition='flip' onclick='getContactDetails(this)'><img src='Female.jpg'/> <p id='contactName'>"+name+"</p> <a href='tel:"+phone+"'><img src='call.png' id='callIcon'/></a> </a></li>");
-	$("#ul").listview("refresh");
+
+	if($("#switch").val()=="female"){
+		$("#ul").append("<li><a href='#viewContact' data-transition='flip' onclick='getContactDetails(this)'><img src='Female.jpg'/> <p id='contactName'>"+name+"</p> <a href='tel:"+phone+"'><img src='call.png' id='callIcon'/></a> </a></li>");
+		$("#ul").listview("refresh");
+	}
+
+	else {
+		$("#ul").append("<li><a href='#viewContact' data-transition='flip' onclick='getContactDetails(this)'><img src='male.jpg'/> <p id='contactName'>"+name+"</p> <a href='tel:"+phone+"'><img src='call.png' id='callIcon'/></a> </a></li>");
+		$("#ul").listview("refresh");	
+	}
 }
 
 function deleteButtonHandler(){
-	alert("inside delete");
+	
 	$("li").eq($(li).index()).remove();
-
-	li[8].remove
-	arr[8].remove
 
 
 }
