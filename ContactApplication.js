@@ -1,6 +1,8 @@
 
 var contactHeader;
 var result;
+
+var li=0;
 function getContactDetails(obj){
 	result=$(obj).children();
 	contactHeader=result[1].innerHTML;
@@ -12,6 +14,12 @@ function getContactDetails(obj){
 	document.getElementById("contactImg").setAttribute('src',contactImg);
 	//alert(result.length); 2
 	var phone=result[2].getAttribute('href');
+
+	li=$(obj).parentsUntil("ul")[2];
+	
+	//alert(result[2]);
+	//var phone=result[2].getAttribute('href');
+
    
 	//document.getElementById("callButton").setAttribute('href',phone);
 
@@ -43,5 +51,21 @@ function saveButtonHandler(obj){
 	//alert(formElements[1].value);
 	var name=formChildren[1].value;
 	var phone=formChildren[3].value;
-	$("#ul").append("<li><a href='#viewContact' data-transition='flip' onclick='getContactDetails(this)'><img src='Female.jpg'/> <p id='contactName'>"+name+"</p> <a href='tel:"+phone+"'><img src='call.png' id='callIcon'/></a> </a></li>");
+
+	if($("#switch").val()=="female"){
+		$("#ul").append("<li><a href='#viewContact' data-transition='flip' onclick='getContactDetails(this)'><img src='Female.jpg'/> <p id='contactName'>"+name+"</p> <a href='tel:"+phone+"'><img src='call.png' id='callIcon'/></a> </a></li>");
+		$("#ul").listview("refresh");
+	}
+
+	else {
+		$("#ul").append("<li><a href='#viewContact' data-transition='flip' onclick='getContactDetails(this)'><img src='male.jpg'/> <p id='contactName'>"+name+"</p> <a href='tel:"+phone+"'><img src='call.png' id='callIcon'/></a> </a></li>");
+		$("#ul").listview("refresh");	
+	}
+}
+
+function deleteButtonHandler(){
+	
+	$("li").eq($(li).index()).remove();
+
+
 }
