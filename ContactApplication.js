@@ -47,13 +47,14 @@ function saveButtonHandler(obj){
 	//alert(formElements[1].value);
 	var name=formChildren[1].value;
 	var phone=formChildren[3].value;
+	var email=formChildren[5].value;
 	if($("#switch").val()=="female"){
-		$("#ul").append("<li><a href='#viewContact' data-transition='flip' onclick='getContactDetails(this)'><img src='Female.jpg'/> <p id='contactName'>"+name+"</p> <a href='tel:"+phone+"'><img src='call.png' id='callIcon'/></a> </a></li>");
+		$("#ul").append("<li><a href='#viewContact' data-transition='flip' onclick='getContactDetails(this)'><img src='Female.jpg'/> <p id='contactName'>"+name+"</p> <p>"+phone+"</p><p>"+email+"</p><a href='tel:"+phone+"'><img src='call.png' id='callIcon'/></a> </a></li>");
 		$("#ul").listview("refresh");
 	}
 
 	else {
-		$("#ul").append("<li><a href='#viewContact' data-transition='flip' onclick='getContactDetails(this)'><img src='male.jpg'/> <p id='contactName'>"+name+"</p> <a href='tel:"+phone+"'><img src='call.png' id='callIcon'/></a> </a></li>");
+		$("#ul").append("<li><a href='#viewContact' data-transition='flip' onclick='getContactDetails(this)'><img src='male.jpg'/> <p id='contactName'>"+name+"</p> <p>"+phone+"</p><p>"+email+"</p><a href='tel:"+phone+"'><img src='call.png' id='callIcon'/></a> </a></li>");
 		$("#ul").listview("refresh");	
 	}
 }
