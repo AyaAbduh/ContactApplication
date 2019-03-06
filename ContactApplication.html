@@ -12,7 +12,7 @@
 <section data-role="page" id="firstPage" >
 	
 	<header data-role="header" >Contact List</header>
-	<a href="#newContact" type="button" id="newContactButton">Add New Contact</a>
+	<a href="#newContact" type="button" id="newContactButton" >Add New Contact</a>
 
 	<center>
 	<article data-role="content" >
@@ -31,10 +31,11 @@
 </section>
 
 <section data-role="page" id="viewContact" data-add-back-btn="true">
-	<header data-role="header"  id="contactHeader"> </header>
+	<header data-role="header"><div id="contactHeader"></div> </header>
 	<article data-role="content">
 	<img id ="contactImg" src=""/>
-	<a href="#newContact" data-role="button" onclick="EditContactDetails()"> Edit</a>
+	<p id="yourEmail"> </p>
+	<a href="#EditContact" data-role="button" onclick="EditContactDetails()"> Edit</a>
 	<a href="#deleteConfirmation" data-role="button"> Delete</a>
 	<a href="" data-role="button" id="callButton"> call</a>
 	</article>
@@ -44,6 +45,7 @@
 	<a href="#firstPage" data-role="button" onclick="deleteButtonHandler()">Delete</a>
 	<a href="#firstPage" data-role="button">Cancel</a>
 </section>
+
 <section data-role="page" id="newContact" data-add-back-btn="true">
 	<header data-role="header"><center>New Contact</center></header>
 	<article data-role="content">
@@ -52,13 +54,9 @@
 			<label> Name </label>
 			<input type="text" name="name" id="name">
 		
-		
-		
 			<label>Phone</label>
 			<input type="tel" name="phone" id="phone" required="true">	
 		
-
-	
 			<label>Email</label>
 			<input type="Email" name="name" id="email" required="true">	
 		
@@ -69,15 +67,38 @@
 		
 			<input type="submit" name="submit" id="formSubmit" value="save" onclick="saveButtonHandler(this)">
 			<input type="reset" name="cancel" id="formCancel" value="cancel">
-			
-		
-
+					
 	</form>
-	
-	<a href="#firstPage" data-role="button"> go to First Page</a>
 	</article>
 	<footer>Contact List</footer>
 </section>
+
+<section data-role="page" id="EditContact" data-add-back-btn="true">
+	<header data-role="header"><center>New Contact</center></header>
+	<article data-role="content">
+	<form>
+		
+			<label> Name </label>
+			<input type="text" name="editedName" id="editedName">
+		
+			<label>Phone</label>
+			<input type="tel" name="editedPhone" id="editedPhone" required="true">	
+		
+			<label>Email</label>
+			<input type="Email" name="editedEmail" id="editedEmail" required="true">	
+		
+		<select id="editedSwitch" data-role="flipswitch">
+				<option value="male">male</option>
+				<option value="female">female</option>
+		</select>
+		
+		<input type="submit" name="submit" id="formSubmit" value="save" onclick="saveChangesHandler(this)">
+		<input type="reset" name="cancel" id="formCancel" value="cancel">			
+	</form>
+	</article>
+	<footer>Contact List</footer>
+</section>
+
 <script src="ContactApplication.js"></script>
 </body>
 </html>
