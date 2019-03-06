@@ -1,8 +1,10 @@
 
 var contactHeader;
+var result;
+
 var li=0;
 function getContactDetails(obj){
-	var result=$(obj).children();
+	result=$(obj).children();
 	contactHeader=result[1].innerHTML;
 	document.getElementById("contactHeader").innerHTML=contactHeader;
 	
@@ -10,14 +12,25 @@ function getContactDetails(obj){
 
 	
 	document.getElementById("contactImg").setAttribute('src',contactImg);
+	//alert(result.length); 2
+	var phone=result[2].getAttribute('href');
+
 	li=$(obj).parentsUntil("ul")[2];
 	
 	//alert(result[2]);
 	//var phone=result[2].getAttribute('href');
+
    
 	//document.getElementById("callButton").setAttribute('href',phone);
 
 	
+}
+function saveChangesHandler(obj){
+	var form=$(obj).parentsUntil("article")[1];
+	var formChildren=$(form).children();
+	var name=formChildren[1].value;
+	result[1].innerHTML=name;
+	window.location.href='#firstPage';
 }
 
 function EditContactDetails(){

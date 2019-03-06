@@ -4,7 +4,7 @@
 }
 
 #callIcon{
-	float:right;
+	margin-right:50px;
 }
 
 #firstPage article{
@@ -20,6 +20,11 @@ header{
 	font-size:30px;
 	padding:7px;
     text-align: center;	
+}
+#contactHeader{
+	color:red;
+	font-size:30px;
+  
 }
 
 footer{
