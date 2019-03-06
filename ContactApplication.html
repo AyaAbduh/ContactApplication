@@ -33,7 +33,7 @@
 </section>
 
 <section data-role="page" id="viewContact" data-add-back-btn="true">
-	<header data-role="header" ><div id="contactHeader"></div> </header>
+	<header data-role="header"  id="contactHeader"> </header>
 	<article data-role="content">
 	<img id ="contactImg" src=""/>
 	<a href="#newContact" data-role="button" onclick="EditContactDetails()"> Edit</a>
@@ -71,12 +71,13 @@
 			</select>
 		
 			<input type="submit" name="submit" id="formSubmit" value="save" onclick="saveButtonHandler(this)">
+			<input type="reset" name="cancel" id="formCancel" value="cancel">
 			
-			<input type="submit" name="submit" id="formSubmit" value="save Changes" onclick="saveChangesHandler(this)">
-			<a href="#firstPage" data-role="button" id="cancelButton"> cancel</a>
 		
 
 	</form>
+	
+	<a href="#firstPage" data-role="button"> go to First Page</a>
 	</article>
 	<footer>Contact List</footer>
 </section>
